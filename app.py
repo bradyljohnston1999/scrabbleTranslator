@@ -9,7 +9,7 @@ translation_dict = {
     'D': 7, 'Q': 8, 'E': 9, 'R': 10, 'F': 11, 'S': 12,
     'G': 13, 'T': 14, 'H': 15, 'U': 16, 'I': 17, 'V': 18,
     'J': 19, 'W': 20, 'K': 21, 'X': 22, 'L': 23, 'Y': 24,
-    'M': 25, 'Z': 26
+    'M': 25, 'Z': 26, ' ': 27
 }
 
 # Reverse dictionary for number to letter translation
