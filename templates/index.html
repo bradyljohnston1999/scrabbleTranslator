@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Translator</title>
-    <!-- Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <style>
         body {
@@ -29,24 +28,24 @@
         .btn-primary {
             margin-right: 10px;
         }
-        .result-box {
+        .result-box, .error-box {
             background-color: #333;
             color: #f8f9fa;
             border: 1px solid #555;
             border-radius: 5px;
             padding: 1em;
             margin-top: 1em;
-            min-height: 100px;
+            min-height: 50px;
         }
     </style>
 </head>
 <body>
     <div class="container">
         <h1 class="text-center">Translator</h1>
-        <form method="post" autocomplete="off">
+        <form id="translatorForm" method="post" action="/translate/">
             <div class="form-group">
                 <label for="text">Enter text:</label>
-                <input type="text" class="form-control" id="text" name="text" required autocomplete="off">
+                <input type="text" class="form-control" id="text" name="text" autocomplete="off" required>
             </div>
             <div class="text-center">
                 <button type="submit" name="action" value="n" class="btn btn-primary">Translate to Numbers</button>
@@ -54,13 +53,7 @@
             </div>
         </form>
         <h2 class="text-center mt-4">Result:</h2>
-        <div class="result-box">
-            {{ result }}
-        </div>
+        <div class="result-box" id="result">{{ result }}</div>
     </div>
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
